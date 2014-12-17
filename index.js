@@ -43,10 +43,19 @@ db.once('open', function callback() {
 
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
+app.set('title', 'ResourceSharer gathering');
 
 app.get('/', function(request, response) {
-  //response.send(cool());
+    response.send(cool());
+});
+app.get('/dbUrl', function(request, response){
     response.send('mongodb://admin:admin@ds062097.mongolab.com:62097/resource-sharer-statistics');
+});
+app.get('/recieveData', function(request, response){
+    response.send("WOW");
+});
+app.post('/recieveData', function(request, response){
+    response.send("WOW");
 });
 
 app.listen(app.get('port'), function() {
