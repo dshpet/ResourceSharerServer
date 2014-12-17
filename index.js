@@ -29,8 +29,8 @@ db.once('open', function callback() {
         acceptance: false
     });
 
-    console.log(genTest.deviceData);
-    genTest.save(function (err, genTest){
+    //console.log(genTest.deviceData);
+   /*genTest.save(function (err, genTest){
         if (err) return console.error(err);
         //genTest.speak();
     });
@@ -38,14 +38,15 @@ db.once('open', function callback() {
     DeviceInfo.find(function (err, devices) {
         if (err) return console.error(err);
         console.log(devices);
-    });
+    });*/
 });
 
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
 
 app.get('/', function(request, response) {
-  response.send(cool());
+  //response.send(cool());
+    response.send('mongodb://admin:admin@ds062097.mongolab.com:62097/resource-sharer-statistics');
 });
 
 app.listen(app.get('port'), function() {
