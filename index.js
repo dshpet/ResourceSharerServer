@@ -48,7 +48,7 @@ app.use(express.static(__dirname + '/public'));
 app.set('title', 'ResourceSharer gathering');
 
 app.get('/', function(request, response) {
-    response.send(cool() + 'Get out of here. This is a database server' + cool());
+    response.send(cool() + <h3> + 'Get out of here. This is a database server ' + cool());
 });
 
 app.get('/dbUrl', function(request, response){
