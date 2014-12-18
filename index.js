@@ -1,3 +1,11 @@
+//nodetime resource monitor
+if(process.env.NODETIME_ACCOUNT_KEY) {
+    require('nodetime').profile({
+        accountKey: process.env.NODETIME_ACCOUNT_KEY,
+        appName: 'ResourceSharerServer' // optional
+    });
+}
+
 var express = require('express');
 var app = express();
 var cool = require('cool-ascii-faces');
@@ -50,7 +58,7 @@ app.set('title', 'ResourceSharer gathering');
 app.get('/', function(request, response) {
     response.send(cool() + '  Get out of here. This is a database server  ' + cool());
 });
-
+//db connection part
 app.get('/dbUrl', function(request, response){
     response.send(dbUrl);
 });

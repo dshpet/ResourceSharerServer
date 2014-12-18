@@ -9,7 +9,8 @@
   "dependencies": {
     "express": "~4.9.x",
     "cool-ascii-faces": "~1.3.x",
-    "mongoose": "*"
+    "mongoose": "*",
+    "nodetime": "*"
   },
   "engines": {
     "node": "0.10.x"
