@@ -69,16 +69,27 @@ app.get('/recieveData', function(request, response){
 //request must be a json string
 app.post('/recieveData', function(request, response){
     var object = null;
-    request.on('end', function(){
-        console.log("POST method on end : " + request);
-        object = JSON.parse(request);
+    var partedObject = "";
 
-        response.send("Received request: " + request + " parsed object: " + object);
-        object.save(function (err, object){
-            if (err) return console.error(err);
-        });
+    request.on('data', function(data){
+        partedObject += data;
     });
 
+    request.on('end', function(){
+        console.log("POST method on end : " + request);
+
+        object = JSON.parse(request);
+
+        response.send("Received request: " + request + " parsed object: " + object + "\n Parted string received: " + partedObject);
+
+        /*object.save(function (err, object){
+            if (err) return console.error(err);
+        });*/
+    });
+    
+    request.on('error', function (e) {
+       response.send("Error occurred" + e);
+    });
 });
 
 app.listen(app.get('port'), function() {
