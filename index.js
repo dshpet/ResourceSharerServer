@@ -68,14 +68,15 @@ app.get('/recieveData', function(request, response){
 });
 //request must be a json string
 app.post('/recieveData', function(request, response){
+    var object = null;
     request.on('end', function(){
         console.log("POST method on end : " + request);
-        var object = JSON.parse(request);
+        object = JSON.parse(request);
         object.save(function (err, object){
             if (err) return console.error(err);
         });
     });
-    response.send("Received: " + request);
+    response.send("Received request: " + request + " parsed object: " + object);
 });
 
 app.listen(app.get('port'), function() {
