@@ -64,7 +64,7 @@ app.get('/dbUrl', function(request, response){
 });
 
 app.get('/recieveData', function(request, response){
-    response.send("WOW");
+    response.send("Place to send data");
 });
 //request must be a json string
 app.post('/recieveData', function(request, response){
