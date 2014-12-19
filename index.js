@@ -80,7 +80,8 @@ app.post('/recieveData', function(request, response){
 
         object = JSON.parse(request);
 
-        response.send("Received request: " + request + " parsed object: " + object + "\n Parted string received: " + partedObject);
+        //response.send("Received request: " + request + " parsed object: " + object + "\n Parted string received: " + partedObject);
+        response.send("Parted string received: " + partedObject);
 
         /*object.save(function (err, object){
             if (err) return console.error(err);
