@@ -54,7 +54,6 @@ db.once('open', function callback() {
 app.set('port', (process.env.PORT || 5000));
 app.use(express.static(__dirname + '/public'));
 app.set('title', 'ResourceSharer gathering');
-app.use(express.bodyParser());
 
 app.get('/', function(request, response) {
     response.send(cool() + '  Get out of here. This is a database server  ' + cool());
@@ -89,6 +88,7 @@ app.post('/recieveData', function(request, response){
         //object = JSON.parse(request);
 
         var b = request.body;
+        var h = request.headers;
         console.log("body : " + b);
 
         //response.send("Received request: " + request + " parsed object: " + object + "\n Parted string received: " + partedObject);
