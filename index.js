@@ -74,6 +74,7 @@ app.post('/recieveData', function(request, response){
             if (err) return console.error(err);
         });
     });
+    response.send("Well, it's received");
 });
 
 app.listen(app.get('port'), function() {
