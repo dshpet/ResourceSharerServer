@@ -72,11 +72,13 @@ app.post('/recieveData', function(request, response){
     request.on('end', function(){
         console.log("POST method on end : " + request);
         object = JSON.parse(request);
+
+        response.send("Received request: " + request + " parsed object: " + object);
         object.save(function (err, object){
             if (err) return console.error(err);
         });
     });
-    response.send("Received request: " + request + " parsed object: " + object);
+
 });
 
 app.listen(app.get('port'), function() {
