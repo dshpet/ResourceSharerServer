@@ -64,6 +64,13 @@ app.get('/dbUrl', function(request, response){
 });
 
 app.get('/recieveData', function(request, response){
+
+    /*var partedObject = "";
+
+    request.on('data', function(data){
+        partedObject += data;
+    });*/
+
     response.send("Place to send data");
 });
 //request must be a json string
@@ -81,7 +88,8 @@ app.post('/recieveData', function(request, response){
         object = JSON.parse(request);
 
         //response.send("Received request: " + request + " parsed object: " + object + "\n Parted string received: " + partedObject);
-        response.send("Parted string received: " + partedObject);
+        //response.send("Parted string received: " + partedObject);
+        response.json({"json" : "test"});
 
         /*object.save(function (err, object){
             if (err) return console.error(err);
