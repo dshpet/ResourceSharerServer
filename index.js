@@ -85,7 +85,7 @@ app.post('/recieveData', function(request, response){
     request.on('end', function(){
         console.log("POST method on end : " + request);
 
-        object = JSON.parse(request);
+        //object = JSON.parse(request);
 
         var b = request.body;
         console.log("body : " + b);
