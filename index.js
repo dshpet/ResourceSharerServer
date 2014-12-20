@@ -80,6 +80,8 @@ app.post('/recieveData', function(request, response){
     var object = null;
     var partedObject = "";
 
+    response.send("JUST SOME RESPONSE TEXT");
+    
     request.on('data', function(data){
         partedObject += data;
     });
