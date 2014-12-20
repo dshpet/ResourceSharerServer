@@ -11,7 +11,8 @@
     "cool-ascii-faces": "~1.3.x",
     "mongoose": "*",
     "nodetime": "*",
-    "connect" : "*"
+    "connect" : "*",
+    "body-parser" : "*"
   },
   "engines": {
     "node": "0.10.x"
