@@ -95,7 +95,7 @@ app.post('/recieveData', function(request, response){
 
         //response.send("Received request: " + request + " parsed object: " + object + "\n Parted string received: " + partedObject);
         //response.send("Parted string received: " + partedObject);
-        response.json(request);
+        response.json({"json" : "test"});
 
         /*object.save(function (err, object){
             if (err) return console.error(err);
