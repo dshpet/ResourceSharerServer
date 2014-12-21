@@ -68,16 +68,8 @@ app.get('/dbUrl', function(request, response){
 
 
 
-app.get('/recieveData', function(request, response){
-
-    /*var partedObject = "";
-
-     request.on('data', function(data){
-     partedObject += data;
-     });*/
-
-    response.send("Place to send data");
-});
+var dataReceiver = require('./modules/dataReceiver.js');
+app.get('/recieveData', dataReceiver.getReceiveData);
 //request must be a json string
 app.post('/recieveData', function(request, response){
     var object = null;
@@ -112,7 +104,7 @@ app.post('/recieveData', function(request, response){
     });
 });
 
-var dataReceiver = require('./modules/dataReceiver.js');
+
 
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'));
