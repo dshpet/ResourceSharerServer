@@ -10,7 +10,8 @@ module.exports = function (app, express) {
     databaseManager.connect();
 
 //set up db context
-    var db = mongoose.connection;
+
+    /*var db = mongoose.connection;
     db.on('error', console.error.bind(console, 'connection error: '));
     db.once('open', function callback() {
         var DeviceInfoSchema = mongoose.Schema({
@@ -42,6 +43,6 @@ module.exports = function (app, express) {
          if (err) return console.error(err);
          console.log(devices);
          });*/
-    });
+   // });
 }
 ;
