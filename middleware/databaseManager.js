@@ -2,17 +2,33 @@ var mongoose = require('mongoose');
 
 module.exports = {
 
-    dbUrl : 'mongodb://admin:admin@ds062097.mongolab.com:62097/resource-sharer-statistics',
+    //location of main shared db
+    dbUrl: 'mongodb://admin:admin@ds062097.mongolab.com:62097/resource-sharer-statistics',
 
-    connect : function(){
+    //func to connect to dv
+    connect: function () {
         mongoose.connect(this.dbUrl);
     },
 
-    connection : mongoose.connection,
+    //returns an instance of connection
+    connection: mongoose.connection,
 
-    model : function(name, schema){
+    //to get a model based on schema
+    model: function (name, schema) {
         return mongoose.model(name, schema);
     },
 
-    databaseInstance : mongoose
+    //instance of db manager module
+    databaseInstance: mongoose,
+
+    //transmitting json schemas
+    deviceInfoSchema: mongoose.Schema({
+        "deviceID": String,
+        "deviceData": JSON,
+        "acceptance": Boolean
+    }),
+    computationalDataSchema: mongoose.Schema({
+        "computationalTask": String,
+        "params": String
+    })
 };

@@ -1,37 +1,38 @@
 module.exports = function (app, express) {
 
+    //get dbmanager
     var databaseManager = require('./databaseManager');
-//get and connect to db
-
-    //var collections = null; //if only some collections are needed
     var mongoose = databaseManager.databaseInstance;
-    //mongoose.connect(dbUrl);
 
+    //connecting to database
     databaseManager.connect();
 
-//set up db context
-
+    //set up db context
     var db = databaseManager.connection;
+
     db.on('error', console.error.bind(console, 'connection error: '));
+
     db.once('open', function callback() {
-        var DeviceInfoSchema = mongoose.Schema({
-            "deviceID": String,
-            "deviceData": JSON,
-            "acceptance": Boolean
-        });
-        DeviceInfoSchema.methods.speak = function () {
+        var DeviceInfoSchema = databaseManager.deviceInfoSchema;
+        var ComputationalDataSchema = databaseManager.computationalDataSchema;
+
+        /**
+         * FOR TESTING PURPOSE
+         */
+        /*DeviceInfoSchema.methods.speak = function () {
             var deviceID = this.deviceID
                     ? "Allright i have it " + this.deviceID
                     : "No ID"
                 ;
             console.log(deviceID);
-        };
+        };*/
+        /*
         var DeviceInfo = mongoose.model('DeviceInfo', DeviceInfoSchema);
         var genTest = new DeviceInfo({
             deviceID: '1337',
             deviceData: 'Keepo',
             acceptance: false
-        });
+        });*/
 
         //console.log(genTest.deviceData);
         /*genTest.save(function (err, genTest){
