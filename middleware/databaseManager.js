@@ -6,5 +6,7 @@ module.exports = {
 
     connect : function(){
         mongoose.connect(this.dbUrl);
-    }
+    },
+
+    connection : mongoose.connection
 };
