@@ -1,7 +1,7 @@
-function getReceiveData(request, response, next){
+/*function getReceiveData(request, response, next){
 
     response.send(cool() + "Data Receiver Place" + cool());
-}
+}*/
 
 
 /*

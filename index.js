@@ -12,7 +12,7 @@ var middleware = require('./middleware')(app, express);
 var cool = require('cool-ascii-faces');
 //routes
 
-var routes = require('./modules')(app);
+//var routes = require('./modules')(app);
 var routeDbUrl = require('./modules/dbUrl');
 
 
