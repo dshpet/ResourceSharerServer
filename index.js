@@ -69,7 +69,16 @@ app.get('/dbUrl', function(request, response){
 
 
 var dataReceiver = require('./modules/dataReceiver.js');
-app.get('/recieveData', dataReceiver.getReceiveData);
+app.get('/recieveData', function(request, response){
+
+    /*var partedObject = "";
+
+     request.on('data', function(data){
+     partedObject += data;
+     });*/
+
+    response.send("Place to send data");
+});
 //request must be a json string
 app.post('/recieveData', function(request, response){
     var object = null;
