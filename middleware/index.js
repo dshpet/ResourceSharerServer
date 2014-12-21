@@ -1,9 +1,13 @@
 module.exports = function (app, express) {
+
+    var databaseManager = require('./databaseManager');
 //get and connect to db
-    var dbUrl = 'mongodb://admin:admin@ds062097.mongolab.com:62097/resource-sharer-statistics';
-    var collections = null; //if only some collections are needed
-    var mongoose = require('mongoose');
-    mongoose.connect(dbUrl);
+
+    //var collections = null; //if only some collections are needed
+    //var mongoose = require('mongoose');
+    //mongoose.connect(dbUrl);
+
+    databaseManager.connect();
 
 //set up db context
     var db = mongoose.connection;
