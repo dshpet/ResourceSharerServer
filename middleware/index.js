@@ -1,5 +1,12 @@
 module.exports = function (app, express) {
 
+    var router = require('../modules');
+    app.use(app.router);
+    router(app);
+
+    /**
+     * DB manager part
+     */
     //get dbmanager
     var databaseManager = require('./databaseManager');
     var mongoose = databaseManager.databaseInstance;

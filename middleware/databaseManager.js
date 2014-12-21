@@ -5,9 +5,12 @@ module.exports = {
     //location of main shared db
     dbUrl: 'mongodb://admin:admin@ds062097.mongolab.com:62097/resource-sharer-statistics',
 
-    //func to connect to dv
+    //func to connect to db
     connect: function () {
         mongoose.connect(this.dbUrl);
+    },
+    disconnect: function () {
+        mongoose.disconnect();
     },
 
     //returns an instance of connection
