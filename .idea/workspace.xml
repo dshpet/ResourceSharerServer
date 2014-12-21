@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="328627a5-d9db-4873-abdd-327ec7ee0417" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/middleware/databaseManager.js" afterPath="$PROJECT_DIR$/middleware/databaseManager.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/middleware/index.js" afterPath="$PROJECT_DIR$/middleware/index.js" />
     </list>
     <ignored path="node-js-getting-started.iws" />
@@ -80,11 +79,11 @@
         <entry file="file://$PROJECT_DIR$/middleware/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.4624592" vertical-offset="0" max-vertical-offset="919">
-              <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+              <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
               <folding>
-                <element signature="e#784#1029#0" expanded="false" />
-                <element signature="e#1038#1259#0" expanded="false" />
-                <element signature="e#1312#1580#0" expanded="false" />
+                <element signature="e#786#1031#0" expanded="false" />
+                <element signature="e#1040#1261#0" expanded="false" />
+                <element signature="e#1314#1582#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -490,11 +489,11 @@
     <entry file="file://$PROJECT_DIR$/middleware/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.4624592" vertical-offset="0" max-vertical-offset="919">
-          <caret line="25" column="31" selection-start-line="25" selection-start-column="31" selection-end-line="25" selection-end-column="31" />
+          <caret line="25" column="10" selection-start-line="25" selection-start-column="10" selection-end-line="25" selection-end-column="10" />
           <folding>
-            <element signature="e#784#1029#0" expanded="false" />
-            <element signature="e#1038#1259#0" expanded="false" />
-            <element signature="e#1312#1580#0" expanded="false" />
+            <element signature="e#786#1031#0" expanded="false" />
+            <element signature="e#1040#1261#0" expanded="false" />
+            <element signature="e#1314#1582#0" expanded="false" />
           </folding>
         </state>
       </provider>
