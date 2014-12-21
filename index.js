@@ -30,7 +30,7 @@ app.get('/dbUrl', function(request, response){
     response.send(dbUrl);
 });
 */
-app.get('/dbUrl', routeDbUrl.getUrl());
+app.get('/dbUrl', routeDbUrl.getUrl(request, response));
 
 
 var dataReceiver = require('./modules/dataReceiver.js');
