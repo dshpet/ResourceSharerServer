@@ -11,6 +11,7 @@ var app = express();
 var middleware = require('./middleware')(app, express);
 var cool = require('cool-ascii-faces');
 //routes
+
 var routes = require('./modules')(app);
 var routeDbUrl = require('./modules/dbUrl');
 
@@ -31,9 +32,9 @@ app.get('/dbUrl', function(request, response){
 });
 */
 //app.get('/dbUrl', routeDbUrl.getUrl(request, response));
+app.use('/dbLoc', routeDbUrl);
 
-
-var dataReceiver = require('./modules/dataReceiver.js');
+//var dataReceiver = require('./modules/dataReceiver.js');
 app.get('/recieveData', function(request, response){
 
     /*var partedObject = "";
