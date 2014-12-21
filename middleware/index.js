@@ -4,7 +4,7 @@ module.exports = function (app, express) {
 //get and connect to db
 
     //var collections = null; //if only some collections are needed
-    //var mongoose = require('mongoose');
+    var mongoose = databaseManager.databaseInstance;
     //mongoose.connect(dbUrl);
 
     databaseManager.connect();

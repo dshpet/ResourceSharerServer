@@ -8,5 +8,11 @@ module.exports = {
         mongoose.connect(this.dbUrl);
     },
 
-    connection : mongoose.connection
+    connection : mongoose.connection,
+
+    model : function(name, schema){
+        return mongoose.model(name, schema);
+    },
+
+    databaseInstance : mongoose
 };
