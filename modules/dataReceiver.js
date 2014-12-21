@@ -39,4 +39,8 @@ router.post('/', function(request, response){
     });
 });
 
+router.get('/deviceTask', function (request, response){
+
+});
+
 module.exports = router;

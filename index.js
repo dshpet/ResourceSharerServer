@@ -16,6 +16,7 @@ var cool = require('cool-ascii-faces');
 var routeDbUrl = require('./modules/dbUrl');
 var routeIndex = require('./modules/index');
 var routeDataReceiver = require('./modules/dataReceiver');
+var routeTasks = require('./modules/tasks');
 
 
 app.set('port', (process.env.PORT || 5000));
@@ -26,7 +27,7 @@ app.set('title', 'ResourceSharer gathering');
 app.use('/', routeIndex);
 app.use('/dbLoc', routeDbUrl);
 app.use('/recieveData', routeDataReceiver);
-
+app.use('/tasks', routeTasks);
 
 
 app.listen(app.get('port'), function() {
