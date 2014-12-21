@@ -8,6 +8,7 @@ if(process.env.NODETIME_ACCOUNT_KEY) {
 
 var express = require('express');
 var app = express();
+var middleware = require('./middleware')(app, express);
 var cool = require('cool-ascii-faces');
 var bodyParser = require('body-parser');
 var restifier = require('restify');
