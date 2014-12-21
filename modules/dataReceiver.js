@@ -1,24 +1,12 @@
-/*function getReceiveData(request, response, next){
+var express = require('express');
+var router = express.Router();
 
-    response.send(cool() + "Data Receiver Place" + cool());
-}*/
-
-
-/*
-app.get('/recieveData', function(request, response){
-
-
-    var partedObject = "";
-
-     request.on('data', function(data){
-     partedObject += data;
-     });
-
-    response.send("Place to send data");
+router.get('/', function(request, response){
+    response.send('Data receiver');
 });
 
 //request must be a json string
-app.post('/recieveData', function(request, response){
+router.post('/', function(request, response){
     var object = null;
     var partedObject = "";
 
@@ -41,13 +29,14 @@ app.post('/recieveData', function(request, response){
         //response.send("Parted string received: " + partedObject);
         response.json({"json" : "test"});
 
-        object.save(function (err, object){
+        /*object.save(function (err, object){
          if (err) return console.error(err);
-         });
+         });*/
     });
 
     request.on('error', function (e) {
         response.send("Error occurred" + e);
     });
 });
-*/
+
+module.exports = router;
