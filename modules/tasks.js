@@ -3,7 +3,7 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function(request, response){
-    taskManager.getAllTasks(response);
+    taskManager.getAllTasksReadable(response);
 });
 
 

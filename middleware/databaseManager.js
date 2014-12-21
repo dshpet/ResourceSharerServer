@@ -54,7 +54,7 @@ module.exports = {
                     console.log('error occured');
                     return;
                 }
-                res.send('Database computational tasks are:\n' + data);
+                res.send(data);
                 console.log(data);
             }
         };
