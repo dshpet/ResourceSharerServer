@@ -1,16 +1,22 @@
-/**
- * Created by Dmitryy on 21-Dec-14.
- */
+function getReceiveData(request, response, next){
+
+    response.send(cool() + "Data Receiver Place" + cool());
+}
+
+
+/*
 app.get('/recieveData', function(request, response){
 
-    /*var partedObject = "";
+
+    var partedObject = "";
 
      request.on('data', function(data){
      partedObject += data;
-     });*/
+     });
 
     response.send("Place to send data");
 });
+
 //request must be a json string
 app.post('/recieveData', function(request, response){
     var object = null;
@@ -35,12 +41,13 @@ app.post('/recieveData', function(request, response){
         //response.send("Parted string received: " + partedObject);
         response.json({"json" : "test"});
 
-        /*object.save(function (err, object){
+        object.save(function (err, object){
          if (err) return console.error(err);
-         });*/
+         });
     });
 
     request.on('error', function (e) {
         response.send("Error occurred" + e);
     });
 });
+*/

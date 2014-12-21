@@ -12,7 +12,8 @@
     "mongoose": "*",
     "nodetime": "*",
     "connect" : "*",
-    "body-parser" : "*"
+    "body-parser" : "*",
+    "restify" : "*"
   },
   "engines": {
     "node": "0.10.x"

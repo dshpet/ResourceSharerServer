@@ -10,6 +10,7 @@ var express = require('express');
 var app = express();
 var cool = require('cool-ascii-faces');
 var bodyParser = require('body-parser');
+var restifier = require('restify');
 
 //get and connect to db
 var dbUrl = 'mongodb://admin:admin@ds062097.mongolab.com:62097/resource-sharer-statistics';
@@ -111,7 +112,7 @@ app.post('/recieveData', function(request, response){
     });
 });
 
-var dataReceiver = require('./modules/dataReceiver.js');
+//var dataReceiver = require('./modules/dataReceiver.js');
 
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'));
