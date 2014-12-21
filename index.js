@@ -10,10 +10,11 @@ var express = require('express');
 var app = express();
 var middleware = require('./middleware')(app, express);
 var cool = require('cool-ascii-faces');
-//routes
 
+//routes
 //var routes = require('./modules')(app);
 var routeDbUrl = require('./modules/dbUrl');
+var routeIndex = require('./modules/index');
 
 
 app.set('port', (process.env.PORT || 5000));
@@ -21,20 +22,9 @@ app.use(express.static(__dirname + '/public'));
 app.set('title', 'ResourceSharer gathering');
 
 
-app.get('/', function(request, response) {
-    response.send(cool() + '  Get out of here. This is a database server  ' + cool());
-});
-
-/*
-//db connection part
-app.get('/dbUrl', function(request, response){
-    response.send(dbUrl);
-});
-*/
-//app.get('/dbUrl', routeDbUrl.getUrl(request, response));
+app.use('/', routeIndex);
 app.use('/dbLoc', routeDbUrl);
 
-//var dataReceiver = require('./modules/dataReceiver.js');
 app.get('/recieveData', function(request, response){
 
     /*var partedObject = "";
