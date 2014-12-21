@@ -63,15 +63,20 @@ module.exports = {
     },
 
     //todo later
-    save : function (object, model){
+    save: function (object, model) {
 
     },
-    seed : function(){
+    seed: function () {
         var randomTask = new ComputationalTask({
-            computationalTask : "int a = 0; int b = 1; int sum = a + b;",
-            params : "straightCompute"
+            computationalTask: "int a = 0; int b = 1; int sum = a + b;",
+            params: "straightCompute"
         });
         randomTask.save();
+
+        ComputationalTask.create({
+            computationalTask: "try {           wr[0] = new DataOutputStream(finalDbSendConnection.getOutputStream());        wr[0].writeBytes(data.toString());        wr[0].flush();        wr[0].close();    } catch (IOException e) {    e.printStackTrace();} Log.d(\"sendDataToDatabase\", wr[0].toString());",
+            params: "parallelCompute"
+        });
     },
 
     //transmitting json schemas
