@@ -62,6 +62,18 @@ module.exports = {
         ComputationalTask.find({}, twisted(res));
     },
 
+    //todo later
+    save : function (object, model){
+
+    },
+    seed : function(){
+        var randomTask = new ComputationalTask({
+            computationalTask : "int a = 0; int b = 1; int sum = a + b;",
+            params : "straightCompute"
+        });
+        randomTask.save();
+    },
+
     //transmitting json schemas
     deviceInfoSchema: _deviceInfoSchema,
     computationalDataSchema: _computationalTaskSchema

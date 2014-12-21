@@ -23,8 +23,7 @@ module.exports = function (app, express) {
         var DeviceInfoSchema = databaseManager.deviceInfoSchema;
         var ComputationalDataSchema = databaseManager.computationalDataSchema;
 
-
-
+        databaseManager.seed();
 
         /**
          * FOR TESTING PURPOSE
