@@ -11,7 +11,7 @@ var app = express();
 var middleware = require('./middleware')(app, express);
 var cool = require('cool-ascii-faces');
 //routes
-var route = require('./modules');
+var routes = require('./modules')(app);
 var routeDbUrl = require('./modules/dbUrl');
 
 
