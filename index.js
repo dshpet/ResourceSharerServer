@@ -66,6 +66,7 @@ app.get('/dbUrl', function(request, response){
 });
 
 
+var dataReceiver = require('./dataReceiver.js');
 
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'));
