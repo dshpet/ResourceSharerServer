@@ -112,7 +112,7 @@ app.post('/recieveData', function(request, response){
     });
 });
 
-//var dataReceiver = require('./modules/dataReceiver.js');
+var dataReceiver = require('./modules/dataReceiver.js');
 
 app.listen(app.get('port'), function() {
   console.log("Node app is running at localhost:" + app.get('port'));
