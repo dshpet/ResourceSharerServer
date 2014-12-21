@@ -10,6 +10,9 @@ var express = require('express');
 var app = express();
 var middleware = require('./middleware')(app, express);
 var cool = require('cool-ascii-faces');
+//routes
+var route = require('./modules');
+var routeDbUrl = require('./modules/dbUrl');
 
 
 app.set('port', (process.env.PORT || 5000));
@@ -21,11 +24,13 @@ app.get('/', function(request, response) {
     response.send(cool() + '  Get out of here. This is a database server  ' + cool());
 });
 
+/*
 //db connection part
 app.get('/dbUrl', function(request, response){
     response.send(dbUrl);
 });
-
+*/
+app.get('/dbUrl', routeDbUrl.getUrl());
 
 
 var dataReceiver = require('./modules/dataReceiver.js');

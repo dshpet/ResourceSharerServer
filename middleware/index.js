@@ -1,8 +1,8 @@
 module.exports = function (app, express) {
 
-    var router = require('../modules');
-    app.use(app.router);
-    router(app);
+    //var router = require('../modules');
+    //app.use(app.router);
+    //router(app);
 
     /**
      * DB manager part
@@ -22,6 +22,9 @@ module.exports = function (app, express) {
     db.once('open', function callback() {
         var DeviceInfoSchema = databaseManager.deviceInfoSchema;
         var ComputationalDataSchema = databaseManager.computationalDataSchema;
+
+
+
 
         /**
          * FOR TESTING PURPOSE
